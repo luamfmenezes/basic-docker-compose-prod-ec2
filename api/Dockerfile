@@ -1,12 +1,13 @@
 FROM node:alpine
 
+#RUN mkdir -p /usr/volum1
+
 WORKDIR /usr/volum1
 
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json yarn.lock ./
 
 RUN npm install
-
-COPY . .
+RUN yarn
 
 EXPOSE 3001
 
