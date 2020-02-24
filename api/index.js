@@ -20,7 +20,7 @@ mongoose.connect(
 )
 
 app.get('/', async (req,res) => {
-    res.send('Container online  5!');
+    res.send('Wellcome to API !');
 })
 
 app.get('/todos', async (req,res) => {
